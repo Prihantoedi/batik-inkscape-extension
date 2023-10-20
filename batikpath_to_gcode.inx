@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Batik GCode</_name>
+    <id>org.inkscape.effect.radiobuttontest</id>
+    <dependency type="executable" location="extensions">batikpath_to_gcode.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="Developer Examples"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">batikpath_to_gcode.py</command>
+    </script>
+</inkscape-extension>
