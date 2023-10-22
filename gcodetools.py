@@ -3917,13 +3917,24 @@ class Gcodetools(inkex.Effect):
 			"id" : "Cylindrical cutter 0001",
 			"diameter":1,
 			"penetration angle":90,
-			"feed":"1000",
-			"penetration feed":"1000",
+			"feed":1000,
+			"penetration feed":1000,
 			"depth step":" ",
-			"tool change gcode":" "
-
+			"tool change gcode":" ",
+			"in trajectotry":"",
+			"out trajectotry":"",
+			"gcode before path":"",
+			"gcode after path":"",
+			"sog":"",
+			"spinlde rpm":"",
+			"CW or CCW":"",
+			"4th axis meaning":" ",
+			"4th axis scale":1.,
+			"4th axis offset":0.,
+			"passing feed":"800",
+			"fine feed":"800"
 		}
-		
+
 		g = ""
 
 		def c(c):
@@ -4542,8 +4553,6 @@ class Gcodetools(inkex.Effect):
 			self.error(_("No paths are selected! Trying to work on all available paths."),"warning")
 		else :
 			paths = self.selected_paths
-			inkex.errormsg(_(str(paths)))
-			exit()
 		self.check_dir() 
 		gcode = ""
 		
